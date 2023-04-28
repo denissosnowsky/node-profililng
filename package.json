@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-profiling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "a": "autocannon -c 250 -d 5 -p 10 'http://localhost:3000/signUp?username=John&password=yo'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

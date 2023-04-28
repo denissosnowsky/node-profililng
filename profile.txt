@@ -1,0 +1,92 @@
+Statistical profiling result from isolate-0x67c1320-77891-v8.log, (104415 ticks, 71 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  18284   17.5%          /home/den/.nvm/versions/node/v20.0.0/bin/node
+     27    0.0%          /usr/lib/x86_64-linux-gnu/libc.so.6
+      2    0.0%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.0%    0.0%  JS: ^parserOnIncoming node:_http_server:996:26
+      2    0.0%    0.0%  JS: *normalizeString node:path:66:25
+      1    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.0%  JS: ^write node:buffer:639:12
+      1    0.0%    0.0%  JS: ^readPackage node:internal/modules/cjs/loader:358:21
+      1    0.0%    0.0%  JS: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    0.0%    0.0%  JS: ^pbkdf2Sync node:internal/crypto/pbkdf2:65:20
+      1    0.0%    0.0%  JS: ^isFull node:internal/fixed_queue:71:9
+      1    0.0%    0.0%  JS: ^hasHooks node:internal/async_hooks:471:18
+      1    0.0%    0.0%  JS: ^fastparse /home/den/Me/Projects/nodejs-profiling/node_modules/parseurl/index.js:95:20
+      1    0.0%    0.0%  JS: ^allocate node:buffer:444:18
+      1    0.0%    0.0%  JS: ^_addHeaderLines node:_http_incoming:247:25
+
+ [C++]:
+   ticks  total  nonlib   name
+  85935   82.3%   99.8%  epoll_wait@@GLIBC_2.3.2
+     25    0.0%    0.0%  __write@@GLIBC_2.2.5
+     23    0.0%    0.0%  fwrite@@GLIBC_2.2.5
+      9    0.0%    0.0%  _IO_file_xsputn@@GLIBC_2.2.5
+      8    0.0%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      2    0.0%    0.0%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      2    0.0%    0.0%  accept4@@GLIBC_2.10
+      1    0.0%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.0%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      1    0.0%    0.0%  pkey_set@@GLIBC_2.27
+      1    0.0%    0.0%  operator delete[](void*)@@GLIBCXX_3.4
+      1    0.0%    0.0%  operator delete(void*, unsigned long)@@CXXABI_1.3.9
+      1    0.0%    0.0%  fputc@@GLIBC_2.2.5
+      1    0.0%    0.0%  epoll_ctl@@GLIBC_2.3.2
+      1    0.0%    0.0%  __pthread_rwlock_wrlock@GLIBC_2.2.5
+      1    0.0%    0.0%  __pthread_mutex_unlock@GLIBC_2.2.5
+      1    0.0%    0.0%  __munmap@@GLIBC_PRIVATE
+      1    0.0%    0.0%  __mmap@@GLIBC_PRIVATE
+      1    0.0%    0.0%  __madvise@@GLIBC_PRIVATE
+      1    0.0%    0.0%  __libc_malloc@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+     14    0.0%    0.0%  JavaScript
+  86017   82.4%   99.9%  C++
+     47    0.0%    0.1%  GC
+  18313   17.5%          Shared libraries
+     71    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     20   37.7%    0.0%  fwrite@@GLIBC_2.2.5
+     11   20.8%    0.0%  __write@@GLIBC_2.2.5
+      8   15.1%    0.0%  _IO_file_xsputn@@GLIBC_2.2.5
+      5    9.4%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      1    1.9%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    1.9%    0.0%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      1    1.9%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      1    1.9%    0.0%  operator delete[](void*)@@GLIBCXX_3.4
+      1    1.9%    0.0%  operator delete(void*, unsigned long)@@CXXABI_1.3.9
+      1    1.9%    0.0%  fputc@@GLIBC_2.2.5
+      1    1.9%    0.0%  __pthread_rwlock_wrlock@GLIBC_2.2.5
+      1    1.9%    0.0%  __madvise@@GLIBC_PRIVATE
+      1    1.9%    0.0%  __libc_malloc@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  85935   82.3%  epoll_wait@@GLIBC_2.3.2
+
+  18284   17.5%  /home/den/.nvm/versions/node/v20.0.0/bin/node
+  18214   99.6%    /home/den/.nvm/versions/node/v20.0.0/bin/node
+  17333   95.2%      JS: ^pbkdf2Sync node:internal/crypto/pbkdf2:65:20
+  17333  100.0%        JS: ^<anonymous> /home/den/Me/Projects/nodejs-profiling/app.js:12:20
+  17333  100.0%          JS: ^handle /home/den/Me/Projects/nodejs-profiling/node_modules/express/lib/router/layer.js:86:49
+  16858   97.3%            JS: ^next /home/den/Me/Projects/nodejs-profiling/node_modules/express/lib/router/route.js:116:16
+    475    2.7%            JS: ~next /home/den/Me/Projects/nodejs-profiling/node_modules/express/lib/router/route.js:116:16
+    592    3.3%      JS: ~pbkdf2Sync node:internal/crypto/pbkdf2:65:20
+    592  100.0%        JS: ~<anonymous> /home/den/Me/Projects/nodejs-profiling/app.js:12:20
+    361   61.0%          JS: ~handle /home/den/Me/Projects/nodejs-profiling/node_modules/express/lib/router/layer.js:86:49
+    361  100.0%            JS: ~next /home/den/Me/Projects/nodejs-profiling/node_modules/express/lib/router/route.js:116:16
+    231   39.0%          JS: ^handle /home/den/Me/Projects/nodejs-profiling/node_modules/express/lib/router/layer.js:86:49
+    231  100.0%            JS: ~next /home/den/Me/Projects/nodejs-profiling/node_modules/express/lib/router/route.js:116:16
+

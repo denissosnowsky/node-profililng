@@ -1,0 +1,90 @@
+Statistical profiling result from isolate-0x616e320-78394-v8.log, (59697 ticks, 109 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    404    0.7%          /home/den/.nvm/versions/node/v20.0.0/bin/node
+     46    0.1%          /usr/lib/x86_64-linux-gnu/libc.so.6
+      2    0.0%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.0%    0.0%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.0%  JS: ^toNamespacedPath node:path:1270:19
+      1    0.0%    0.0%  JS: ^splitRoot node:fs:2468:33
+      1    0.0%    0.0%  JS: ^slowCases node:internal/util:215:19
+      1    0.0%    0.0%  JS: ^removeListener node:events:673:28
+      1    0.0%    0.0%  JS: ^readableAddChunk node:internal/streams/readable:250:26
+      1    0.0%    0.0%  JS: ^randomFillSync node:internal/crypto/random:117:24
+      1    0.0%    0.0%  JS: ^nextTick node:internal/process/task_queues:103:18
+      1    0.0%    0.0%  JS: ^isTraceHTTPEnabled node:internal/http:40:28
+      1    0.0%    0.0%  JS: ^get node:net:2231:6
+      1    0.0%    0.0%  JS: ^format /home/den/Me/Projects/nodejs-profiling/node_modules/content-type/index.js:65:17
+      1    0.0%    0.0%  JS: ^emitCloseNT node:_http_server:985:21
+      1    0.0%    0.0%  JS: ^digest node:internal/crypto/hash:117:40
+      1    0.0%    0.0%  JS: ^checkListener node:events:270:23
+      1    0.0%    0.0%  JS: ^assert node:internal/assert:11:16
+      1    0.0%    0.0%  JS: ^afterWrite node:internal/streams/writable:497:20
+      1    0.0%    0.0%  JS: ^_write node:internal/streams/writable:293:16
+      1    0.0%    0.0%  JS: ^Stream node:internal/streams/legacy:10:16
+      1    0.0%    0.0%  JS: ^Readable node:internal/streams/readable:194:18
+      1    0.0%    0.0%  JS: ^Module._resolveLookupPaths node:internal/modules/cjs/loader:794:38
+      1    0.0%    0.0%  JS: ^Module._load node:internal/modules/cjs/loader:894:24
+      1    0.0%    0.0%  JS: ^IncomingMessage node:_http_incoming:53:25
+      1    0.0%    0.0%  JS: ^Hash node:internal/crypto/hash:60:14
+      1    0.0%    0.0%  JS: *hasHooks node:internal/async_hooks:471:18
+
+ [C++]:
+   ticks  total  nonlib   name
+  59019   98.9%   99.6%  epoll_wait@@GLIBC_2.3.2
+     25    0.0%    0.0%  __write@@GLIBC_2.2.5
+     21    0.0%    0.0%  fwrite@@GLIBC_2.2.5
+     12    0.0%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      8    0.0%    0.0%  _IO_file_xsputn@@GLIBC_2.2.5
+      4    0.0%    0.0%  accept4@@GLIBC_2.10
+      3    0.0%    0.0%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      3    0.0%    0.0%  shutdown@@GLIBC_2.2.5
+      2    0.0%    0.0%  pthread_cond_signal@@GLIBC_2.3.2
+      2    0.0%    0.0%  cfree@GLIBC_2.2.5
+      2    0.0%    0.0%  __pthread_mutex_unlock@GLIBC_2.2.5
+      2    0.0%    0.0%  __libc_malloc@@GLIBC_2.2.5
+      1    0.0%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
+      1    0.0%    0.0%  operator new(unsigned long)@@GLIBCXX_3.4
+      1    0.0%    0.0%  isprint@@GLIBC_2.2.5
+      1    0.0%    0.0%  __read@@GLIBC_2.2.5
+      1    0.0%    0.0%  __pthread_mutex_lock@GLIBC_2.2.5
+      1    0.0%    0.0%  __munmap@@GLIBC_PRIVATE
+      1    0.0%    0.0%  __madvise@@GLIBC_PRIVATE
+      1    0.0%    0.0%  __clock_gettime@@GLIBC_PRIVATE
+
+ [Summary]:
+   ticks  total  nonlib   name
+     25    0.0%    0.0%  JavaScript
+  59111   99.0%   99.8%  C++
+     49    0.1%    0.1%  GC
+    452    0.8%          Shared libraries
+    109    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     18   27.3%    0.0%  fwrite@@GLIBC_2.2.5
+     18   27.3%    0.0%  __write@@GLIBC_2.2.5
+     10   15.2%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      8   12.1%    0.0%  _IO_file_xsputn@@GLIBC_2.2.5
+      3    4.5%    0.0%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      2    3.0%    0.0%  cfree@GLIBC_2.2.5
+      2    3.0%    0.0%  __libc_malloc@@GLIBC_2.2.5
+      1    1.5%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
+      1    1.5%    0.0%  isprint@@GLIBC_2.2.5
+      1    1.5%    0.0%  __pthread_mutex_unlock@GLIBC_2.2.5
+      1    1.5%    0.0%  __pthread_mutex_lock@GLIBC_2.2.5
+      1    1.5%    0.0%  __madvise@@GLIBC_PRIVATE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  59019   98.9%  epoll_wait@@GLIBC_2.3.2
+
